@@ -1,3 +1,55 @@
 .App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(to right top, #4e78b1 0%, #68cab8 100%);
+  color: white;
+}
+
+.image-container {
+  height: 40em;
+  width: 100%;
+  background: no-repeat center fixed;
+  background-size: cover;
+}
+
+.section-header {
+  font-size: 6rem;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.section-subheader {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.event-section {
+  position: relative;
+  padding: 5%;
+}
+
+.event-section p {
+  font-size: 2rem;
+  line-height: 3.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.event-button {
+  padding: 5% 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-button button {
+  font-size: 2rem;
+  padding: 1rem;
+  outline: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right top, #4e78b1 0%, #68cab8 100%);
+  border: 4px ridge transparent;
+  color: white;
+  cursor: pointer;
 }
