@@ -59,7 +59,7 @@ button {
   margin: auto 5%;
 }
 
-.registration-section h1 {
+.registration-section h1, .contact-section h3 {
   font-size: 4rem;
   text-align: center;
   text-transform: uppercase; 
@@ -85,14 +85,14 @@ form {
   max-width: 70%;
 }
 
-form input {
+.registration-form input, .contact-form input, textarea {
   font-size: 2rem;
   color: #549db9;
   border: 1px solid #549db9;
   outline: none;
 }
 
-.personal-details li {
+.registration-form li, .contact-form li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -108,20 +108,15 @@ form input {
   justify-content: space-between;
 }
 
-.personal-details > li > label,
-.personal-details li p {
+.registration-form > li > label,
+.registration-form li p, .contact-form > li > label {
   flex: 1 0 120px;
   max-width: 220px;
 }
  
-.personal-details > li > label + *,
-.gender-input {
+.registration-form > li > label + *,
+.gender-input, .contact-form > li > label + * {
   flex: 1 0 220px;
-}
-
-.personal-details button {
-  text-transform: uppercase;
-  letter-spacing: .09em;
 }
 
 .gender-input li {
@@ -131,9 +126,31 @@ form input {
 .form-button {
   display: flex;
   justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: .09em;
 }
 
 .display-button {
   position: relative;
   left: 85%;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info li {
+  list-style-type: none;
+  font-size: 1.5rem;
+} 
+
+.contact-info li:first-of-type {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.contact-section h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  text-align: center;
 }
