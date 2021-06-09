@@ -1,12 +1,12 @@
 import './App.css';
 import EventSection from './Components/EventSection';
-import Form from './Components/Form';
+import Registration from './Components/Registration';
 
 function App() {
   return (
     <div className="App">
       <EventSection />
-      <Form />
+      <Registration />
     </div>
   );
 }

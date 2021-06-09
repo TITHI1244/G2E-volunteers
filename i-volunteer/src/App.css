@@ -11,6 +11,7 @@
   width: 100%;
   background: no-repeat center fixed;
   background-size: cover;
+  margin-bottom: 8%;
 }
 
 .section-header {
@@ -54,9 +55,24 @@ button {
   cursor: pointer;
 }
 
+.registration-section {
+  margin: auto 5%;
+}
+
+.registration-section h1 {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase; 
+}
+
+.registration-section h3 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize; 
+}
+
 form {
-  margin: 2% 10%;
-  padding: 10%;
+  padding: 5%;
   font-size: 2rem;
   line-height: 2rem;
   border: 5px double transparent;
@@ -64,6 +80,9 @@ form {
   border-image-slice: 1;
   background-color: white;
   color: #549db9;
+  width: 50%;
+  margin: 2% auto;
+  max-width: 70%;
 }
 
 form input {
@@ -73,10 +92,48 @@ form input {
   outline: none;
 }
 
-hr {
-  border: 1px solid #88a5b1;
+.personal-details li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 5%;
 }
 
-.personal-details {
+.gender-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   font-size: 2rem;
+  justify-content: space-between;
+}
+
+.personal-details > li > label,
+.personal-details li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+ 
+.personal-details > li > label + *,
+.gender-input {
+  flex: 1 0 220px;
+}
+
+.personal-details button {
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+.gender-input li {
+  width: 150px;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.display-button {
+  position: relative;
+  left: 85%;
 }
