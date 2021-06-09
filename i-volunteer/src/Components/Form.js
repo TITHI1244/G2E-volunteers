@@ -20,7 +20,7 @@ export default function Form({addNewShift}) {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <ul className="personal-details">
+            <ul className="registration-form">
                 <li>
                     <label htmlFor="full-name">Full name</label>
                     <input type="text" id="full-name" value={fullName} onChange={e => setFullName(e.target.value)} />
