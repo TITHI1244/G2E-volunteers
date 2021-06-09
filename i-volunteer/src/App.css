@@ -43,7 +43,7 @@
   justify-content: space-between;
 }
 
-.event-button button {
+button {
   font-size: 2rem;
   padding: 1rem;
   outline: none;
@@ -52,4 +52,31 @@
   border: 4px ridge transparent;
   color: white;
   cursor: pointer;
+}
+
+form {
+  margin: 2% 10%;
+  padding: 10%;
+  font-size: 2rem;
+  line-height: 2rem;
+  border: 5px double transparent;
+  border-image: linear-gradient(to right top, #68cab8 0%, #4e78b1 100%);
+  border-image-slice: 1;
+  background-color: white;
+  color: #549db9;
+}
+
+form input {
+  font-size: 2rem;
+  color: #549db9;
+  border: 1px solid #549db9;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #88a5b1;
+}
+
+.personal-details {
+  font-size: 2rem;
 }
