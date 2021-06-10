@@ -10,16 +10,23 @@ import ShiftList from './Components/ShiftList';
 import Footer from './Components/Footer';
 import About from './Components/About';
 
-
 function App() {
-  // const [shifts, setShifts] = useState([]);
+  const [shifts, setShifts] = useState([]);
+  const addNewShift = (fullName, userName, email, contact, gender, startTime, endTime) => {
+    const newShift = {fullName, userName, email, contact, gender, startTime, endTime};
+    setShifts([...shifts, newShift]);
+}
   return (
     <div className="App">
       <Router>        
           <Navbar />
-          <Route exact path="/" component={Home} />  
+          <Route exact path="/">
+            <Home addNewShift={addNewShift} />
+          </Route>  
           <Route path="/about" component={About} />         
-          <Route path="/registered-shifts" component={ShiftList} /> 
+          <Route path="/registered-shifts">
+            <ShiftList shifts={shifts} addNewShift={addNewShift}/>
+          </Route>
           <Footer />       
       </Router>
     </div>

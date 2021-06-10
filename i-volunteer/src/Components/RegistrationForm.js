@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
 
-export default function Form({addNewShift}) {    
-    const [showList, setShowList] = useState(false);
+export default function RegistrationForm({addNewShift}) { 
     const [fullName, setFullName] = useState("");
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [contact, setContact] = useState("");
-    const [gender, setGender] = useState("Male");
+    const [gender, setGender] = useState("");
     const [startTime, setStartTime] = useState("");
     const [endTime, setEndTime] = useState("");
-
-    const alterDisplay = () => {
-        setShowList(!showList);
-    }
+    const [modal, setModal] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,25 +18,35 @@ export default function Form({addNewShift}) {
         setEmail("");
         setContact("");
         setGender("Male");
+        setStartTime("");
+        setEndTime("");
+    }
+    const showModal = () => {
+        console.log("yes")
+        setModal(true);
+    }
+
+    const hideModal = () => {
+        setModal(false);
     }
     return (
         <form onSubmit={handleSubmit}>
             <ul className="registration-form">
                 <li>
                     <label htmlFor="full-name">Full name</label>
-                    <input type="text" id="full-name" value={fullName} onChange={e => setFullName(e.target.value)} />
+                    <input type="text" id="full-name" value={fullName} onChange={e => setFullName(e.target.value)} required />
                 </li>
                 <li>
                     <label htmlFor="user-name">User name</label>
-                    <input type="text" id="user-name" value={userName} onChange={e => setUserName(e.target.value)} />
+                    <input type="text" id="user-name" value={userName} onChange={e => setUserName(e.target.value)} required />
                 </li>
                 <li>
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
+                    <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} required />
                 </li>
                 <li>
                     <label htmlFor="contact">Contact no</label>
-                    <input type="tel" id="contact" value={contact} onChange={e => setContact(e.target.value)} />
+                    <input type="tel" id="contact" value={contact} onChange={e => setContact(e.target.value)} required />
                 </li>   
                 <li>  
                     <p>Gender</p>         
@@ -66,7 +66,7 @@ export default function Form({addNewShift}) {
                     </ul>
                 </li> 
                 <li>
-                    <label htmlFor="start-time">Suitable start time</label>
+                    <label htmlFor="start-time">Preferred start time</label>
                     <input
                         type="time"
                         id="start-time"
@@ -77,7 +77,7 @@ export default function Form({addNewShift}) {
                     />
                 </li>
                 <li>
-                    <label htmlFor="end-time">Suitable end time</label>
+                    <label htmlFor="end-time">Preferred end time</label>
                     <input
                         type="time"
                         id="end-time"
@@ -88,13 +88,19 @@ export default function Form({addNewShift}) {
                     />
                 </li>
                 <div className="form-button">
-                    <button type="submit">
+                    <button type="submit" onClick={showModal}>
                         Join Now!
                     </button>
                 </div>
-                <div className="display-button">
-                    <button onClick={alterDisplay}><Link to="/registered-shifts">Display registered shifts</Link></button>
-                </div>
+                <div className="modal-container">
+                    {modal ? <div className="thanks-modal">
+                        <div className="modal-content">
+                            <span className="modal-close" onClick={hideModal}>&times;</span>
+                            <h3>We do appreciate your time & help.</h3>
+                            <h3>Looking forward to meeting you soon ☺️</h3>
+                        </div>
+                    </div> : <div />} 
+                </div>               
             </ul>
         </form>
     )
