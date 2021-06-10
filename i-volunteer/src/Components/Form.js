@@ -1,6 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
-export default function Form({addNewShift}) {
+export default function Form({addNewShift}) {    
+    const [showList, setShowList] = useState(false);
     const [fullName, setFullName] = useState("");
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
@@ -8,6 +15,10 @@ export default function Form({addNewShift}) {
     const [gender, setGender] = useState("Male");
     const [startTime, setStartTime] = useState("");
     const [endTime, setEndTime] = useState("");
+
+    const alterDisplay = () => {
+        setShowList(!showList);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -80,6 +91,9 @@ export default function Form({addNewShift}) {
                     <button type="submit">
                         Join Now!
                     </button>
+                </div>
+                <div className="display-button">
+                    <button onClick={alterDisplay}><Link to="/registered-shifts">Display registered shifts</Link></button>
                 </div>
             </ul>
         </form>
