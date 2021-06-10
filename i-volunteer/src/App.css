@@ -6,6 +6,79 @@
   color: white;
 }
 
+.navbar-section{
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0);
+  position: sticky;
+  top: 0;
+  background-color: #303d4e;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0.8;
+}
+
+nav {
+  min-height: 10vh;
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 5em;
+  height: 5.5em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 5em;
+  opacity: 0.8;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+
+.menu, .close {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 1%;
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  border-radius: 5px;
+}
+
+.about-section {
+  height: 15em;
+  padding: 3em 3em 0;
+  text-align: center;
+  background-color: linear-gradient(to right top, #68cab8 0%, #4e78b1 100%);
+  font-size: 2rem;
+}
+
+.shift-overview {
+  height: 15em;
+  padding: 2em 2em 0;
+  text-align: center;
+  background-color: linear-gradient(to right top, #68cab8 0%, #4e78b1 100%);
+  font-size: 1.5rem;
+}
+
 .image-container {
   height: 40em;
   width: 100%;
@@ -42,6 +115,11 @@
   padding: 5% 10%;
   display: flex;
   justify-content: space-between;
+}
+
+.event-button button a {
+  text-decoration: none;
+  color: white;
 }
 
 button {
@@ -131,8 +209,20 @@ form {
 }
 
 .display-button {
-  position: relative;
-  left: 85%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.display-button button {
+  font-size: 1.2rem;
+}
+
+.display-button a {
+  text-decoration: none;
+  color: white;
 }
 
 .contact-info {
@@ -153,4 +243,14 @@ form {
   font-size: 3rem;
   text-transform: capitalize;
   text-align: center;
+}
+
+footer {
+  background-color: #303d4e;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0);
+  opacity: 0.8;
 }

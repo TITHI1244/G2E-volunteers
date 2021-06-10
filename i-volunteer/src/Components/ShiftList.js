@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function ShiftList({shifts}) {
     return (
-        <div>
+        <section className="shift-overview">
             <h2>Overview</h2>
-            {shifts.length
+            {shifts && shifts.length
                 ? shifts.map((shift) => (
                       <div>
                           <div>Name: {shift.fullName}</div>
@@ -15,6 +15,6 @@ export default function ShiftList({shifts}) {
                       </div>
                   ))
                 : 'No one is working'}
-        </div>
+        </section>
     )
 }
