@@ -19,26 +19,12 @@ Query: ${query}`);
     }
     return (
         <form className="contact-form" onSubmit={handleSubmit} method="POST">
-            <ul>
-                <li>
-                    <label htmlFor="name">Name</label>
-                    <input type="text" id="name" value={name} onChange={e => setName(e.target.value)} />
-                </li>
-                <li>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
-                </li>
-                <li>
-                    <label htmlFor="contact">Contact no</label>
-                    <input type="tel" id="contact" value={contact} onChange={e => setContact(e.target.value)} />
-                </li>
-                <li>
-                    <label htmlFor="query">Your query</label>
-                    <textarea name="query" id="query" value={query} onChange={e => setQuery(e.target.value)} rows="5" cols="25" />
-                </li>
-            </ul>
+            <input type="text" id="name" value={name} placeholder="Your name" onChange={e => setName(e.target.value)} />
+            <input type="email" id="email" value={email} placeholder="Email address" onChange={e => setEmail(e.target.value)} />
+            <input type="tel" id="contact" value={contact} placeholder="Contact no" onChange={e => setContact(e.target.value)} />
+            <textarea name="query" id="query" value={query} placeholder="Your query/comment" onChange={e => setQuery(e.target.value)} rows="5" cols="25" />
             <div className="form-button">
-                <button type="submit">Contact us</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
     )
