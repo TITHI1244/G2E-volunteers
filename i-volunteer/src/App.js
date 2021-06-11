@@ -12,8 +12,8 @@ import About from './Components/About';
 
 function App() {
   const [shifts, setShifts] = useState([]);
-  const addNewShift = (fullName, userName, email, contact, gender, startTime, endTime) => {
-    const newShift = {fullName, userName, email, contact, gender, startTime, endTime};
+  const addNewShift = (fullName, userName, email, contact, gender, startTime, endTime, skills) => {
+    const newShift = {fullName, userName, email, contact, gender, startTime, endTime, skills};
     setShifts([...shifts, newShift]);
 }
   return (

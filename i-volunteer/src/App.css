@@ -130,10 +130,10 @@ nav ul li a:hover {
 }
 
 .event-section p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 3.5rem;
-  text-align: center;
-  font-weight: bold;
+  /* text-align: ; */
+  text-shadow: 2px 2px 8px #000;
 }
 
 .event-button {
@@ -151,7 +151,7 @@ nav ul li a:hover {
   margin: auto 5%;
 }
 
-.registration-section h1, .contact-section h3 {
+.registration-section h1, .contact-header {
   font-size: 4rem;
   text-align: center;
   text-transform: uppercase; 
@@ -163,42 +163,123 @@ nav ul li a:hover {
   text-transform: capitalize; 
 }
 
-.registration-form input, .contact-form input, textarea {
-  font-size: 2rem;
-  color: #549db9;
-  border: 1px solid #549db9;
-  outline: none;
-}
-
-.registration-form li, .contact-form li {
+.registration-flex {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.registration-info {
+  flex-grow: 0.5;
+}
+
+.registration-info div {
+  margin-bottom: 8%;
+}
+
+.gender-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.registration-form {
+  width: 80%;
+}
+
+.registration-form input, .registration-form textarea {
+  margin-bottom: 5%;  
+}
+
+.registration-form input, .registration-form textarea {
+  display: block;
+  width: 90%;
   font-size: 2rem;
-  margin-bottom: 5%;
+  color: #549db9;
+  border-radius: 8px;
+  padding: 3%;
+  border: 1px solid rgb(203, 206, 209, 0.2);
+  outline: none;
+  transition: 0.1s ease;  
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.registration-form input::placeholder, .registration-form textarea::placeholder {
+  color: #4e78b1;
+}
+
+.registration-form input:hover, .registration-form textarea:hover {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right top, #68cab8 0%, #4e78b1 100%);
+  border-image-slice: 1;
 }
 
 .gender-input {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
   font-size: 2rem;
   justify-content: space-between;
 }
 
-.registration-form > li > label,
-.registration-form li p, .contact-form > li > label {
-  flex: 1 0 120px;
-  max-width: 220px;
-}
- 
-.registration-form > li > label + *,
-.gender-input, .contact-form > li > label + * {
-  flex: 1 0 220px;
+.gender-input label {
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  user-select: none;
 }
 
-.gender-input li {
-  width: 150px;
+.gender-input input {
+  position: absolute;
+  top: 15px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: absolute;
+  top: 5px;
+  margin-left: 6%;
+  height: 1em;
+  width: 1em;
+  background-color: #549db9;
+  border-radius: 50%;
+}
+
+.gender-input:hover input ~ .checkbox {
+  background-color: gray;
+}
+
+.gender-input label input:checked ~ .checkbox {
+  background-color: #549db9;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 8px;
+	left: 8px;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: white;
+}
+
+.gender-input label input:checked ~ .checkbox:after {
+  display: block;
+}
+
+.skills {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+input[type=checkbox] {
+  width: 5%;
 }
 
 .form-button {
@@ -206,6 +287,10 @@ nav ul li a:hover {
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: .09em;
+}
+
+.required-field {
+  color: red;
 }
 
 .modal-container {
@@ -216,6 +301,7 @@ nav ul li a:hover {
   padding-top: 15%;
   margin-left: 20%;
 }
+
 .thanks-modal {
   z-index: 1; 
   width: 80%; 
@@ -245,13 +331,27 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+.contact {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  justify-content: space-around;
+}
+
+.contact div:first-of-type {
+  padding-right: 5%;
+  border-right: 1px solid rgb(255, 255, 255, 0.1);
+}
+
 .contact-info {
   text-align: center;
+  margin-top: 15%;
 }
 
 .contact-info li {
   list-style-type: none;
   font-size: 1.5rem;
+  line-height: 5rem;
+  font-style: italic;
 } 
 
 .contact-info li:first-of-type {
@@ -259,10 +359,39 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-.contact-section h2 {
-  font-size: 3rem;
+.contact h2 {
+  font-size: 2rem;
   text-transform: capitalize;
   text-align: center;
+}
+
+.contact-form {
+  width: 80%;
+  margin: auto;
+}
+
+.contact-form input, .contact-form textarea {
+  display: block;
+  color: #549db9;
+  margin: 1em auto;
+  padding: 1em;
+  width: 80%;
+  border-radius: 8px;
+  border-style: none;
+  border: 1px solid #549db9;
+  transition: 0.1s ease;
+  outline: none;
+}
+
+.contact-form input:hover, .contact-form textarea:hover {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right top, #68cab8 0%, #4e78b1 100%);
+  border-image-slice: 1;
+}
+
+.contact-form .form-button button {
+  font-size: 1rem;
+  padding: 0.7em;
 }
 
 .cards-container {
@@ -299,8 +428,18 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
+.card-null {
+  text-align: center;
+}
+
+.map {
+  width: "500px";
+  height: "500px";
+}
+
 footer {
   background-color: #303d4e;
+  margin-top: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
   text-align: center;
