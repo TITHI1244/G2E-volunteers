@@ -80,6 +80,7 @@ nav ul li a:hover {
 .about-header {
   text-align: center;
   font-size: 2.5rem;
+  margin-top: 2%;
 }
 
 .about-section {
@@ -92,8 +93,8 @@ nav ul li a:hover {
 }
 
 .about-section iframe {
-  height: 20rem;
-  margin-top: 6%;
+  height: 25rem;
+  width: 90%;
 }
 
 .shift-overview {
