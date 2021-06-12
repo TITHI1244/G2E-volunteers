@@ -4,11 +4,7 @@ import {
   } from "react-router-dom";
 import Logo from '../Assets/Images/logo.png';
 
-export default function Navbar() {    
-  // const [burgerMenu, setBurgerMenu] = useState(false);
-  // const handleNav = () => {
-  //   setBurgerMenu(!burgerMenu);
-  // }
+export default function Navbar() { 
     return (
         <div className="navbar-section">
             <nav>
@@ -17,9 +13,7 @@ export default function Navbar() {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/registered-shifts">Registered shifts</Link></li>
-                    {/* <li className="close">X</li> */}
                 </ul>
-                <div className="menu">Menu</div>
             </nav>
         </div>
     )

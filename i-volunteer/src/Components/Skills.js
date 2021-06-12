@@ -20,10 +20,10 @@ export default function Skills({volunteerSkills}) {
     }
     return (
         <div className="skills-container">
-            Skills
+            <h3>Skills</h3>
             <div className="skills" onBlur={submitSkills}>
                 {skillSet.map((skill, index) =>
-                    <div className="skill-item">
+                    <div key={skill + index} className="skill-item">
                         <input type="checkbox" id={`skill-${index}`} name={skill} value={skill} checked={isChecked[index]} onChange={() => handleChange(index)} />
                         <label htmlFor={`skill-${index}`}>{skill}</label>
                     </div>
