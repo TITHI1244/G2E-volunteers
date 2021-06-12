@@ -33,7 +33,7 @@ For styling, I used pure CSS as it seems more challenging to me and media querie
 
 The immediate improvements needed that I can see:
 1. First and foremost, the navigation bar looks ugly for smaller screen. I tried to incorporate 'React Transition Group' for adding 'Burger menu' for smaller screen sizes. But I could not succeed.
-2. I also tried to embed the map showing event venue, but could not succeed. I tried to add and use 'google-maps-react' and show the map from Google maps. Firstly I did not know that Google maps are not free to use anymore so I see developer use writing on the map. And the main bug is, sometimes it is loading nicely and sometimes it takes infinity and does not show up.
+2. I also tried to embed the map showing event venue, but could not succeed. I tried to add and use 'google-maps-react' and show the map from Google maps. Firstly I did not know that Google maps are not free to use anymore, so I see 'developer use' text all over the map. And the main bug is, sometimes it is loading nicely and sometimes it takes infinity and does not show up.
 3. I planned the shifts-card to be filtered according to skills so that the event organizer can check the manpower in certain areas. That is why I used the 'picsum' image that was supposed to point to the area. But due to time constraints, I could not manage to do it.
 4. Finally the code is not much organized, especially .css is messy 😟 I also needed some time to arrange it better.
 
