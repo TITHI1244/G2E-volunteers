@@ -11,17 +11,24 @@ In your local, clone the repo and run 'npm install'. Then from the terminal run 
 
 How to use it?
 At first, you can see the homepage. In the top navigation bar, you can see 2 more nav links: About & Shifts. Go to 'About' and check what it is about(sorry to disappoint you, there are some demo lipsum text only 😔).
+
 Next you can also visit 'Shifts' nav link that would show all the registered shifts. But as of now, we have not created any shifts yet so we will see a plain text.
+
 Now revisit 'Home' and check out the registration form. Fill up the form and submit it. You will see a 'Thank you' note after your submission. 
+
 Now visit again 'Shifts' from nav and you can see whatever data you have just registered.
 If you want, you can register a few more and see how it looks in the 'Shifts' page. 
+
 ⚠️⚠️⚠️If you refresh your page, it would all be gone as there is no database connected.
 Finally you have come to the contact part of the page, where you can see my contact info to directly contact me. And if you have something specific to ask or recommend, you can use the contact form. 
+
 After inserting all your information in the contact form, you can submit and go to your console and you can view it 😊
 
 List of libraries & frameworks used:
-The app is completely built using front-end technologies, no database or backend is there. 
+The app is completely built using front-end technologies, no database or backend is there.
+
 I have used Reactjs and the most commonly used features from it, props, hooks, router etc. 
+
 For styling, I used pure CSS as it seems more challenging to me.
 
 The immediate improvements needed that I can see:
