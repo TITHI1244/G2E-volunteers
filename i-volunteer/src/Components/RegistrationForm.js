@@ -62,9 +62,10 @@ export default function RegistrationForm({addNewShift}) {
                                 <input type="radio" name="gender" value="Other" />
                                 <span className="checkbox" />
                             </label>
-                        </div>    
+                        </div> 
+                        <div />   
                     </div>
-                    <div>
+                    <div className="time-input">
                         <label htmlFor="start-time">Preferred start time</label>
                         <input
                             type="time"
@@ -75,7 +76,7 @@ export default function RegistrationForm({addNewShift}) {
                             onChange={(e) => setStartTime(e.target.value)}
                         />  
                     </div> 
-                    <div>            
+                    <div className="time-input">            
                         <label htmlFor="end-time">Preferred end time</label>
                         <input
                             type="time"
@@ -86,9 +87,9 @@ export default function RegistrationForm({addNewShift}) {
                             onChange={(e) => setEndTime(e.target.value)}
                         />
                     </div>
-                    <Skills volunteerSkills={getVolunteerSkills} />
                 </div>
-            </div>        
+            </div>
+            <Skills volunteerSkills={getVolunteerSkills} />        
             <div className="form-button">
                 <button type="submit">
                     Join Now!
