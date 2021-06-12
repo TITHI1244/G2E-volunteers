@@ -77,12 +77,24 @@ nav ul li a:hover {
   opacity: 1;
 }
 
-.about-section {
-  height: 15em;
-  padding: 3em 3em 0;
+.about-header {
   text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2%;
+}
+
+.about-section {
+  padding: 3em 3em 0;
   background-color: linear-gradient(to right top, #68cab8 0%, #4e78b1 100%);
   font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-content: space-between;
+}
+
+.about-section iframe {
+  height: 25rem;
+  width: 90%;
 }
 
 .shift-overview {
@@ -520,6 +532,18 @@ footer {
   .contact h2 {
     font-size: 1.5rem;
   }
+  .about-header {
+    font-size: 1.5rem;
+  }  
+  .about-section {
+    font-size: 1rem;
+    display: block;
+  }
+  
+  .about-section iframe {
+    width: 80%;
+    margin: auto;
+  }
   .cards-container {
     display: block;
   }
@@ -529,5 +553,14 @@ footer {
   .skills {
     display: block;
     margin-left: 12%;
+  }
+  
+  .about-section {
+    display: block;
+  }
+
+  .about-section iframe {
+    width: 80%;
+    margin: 0;
   }
 }
